@@ -1,0 +1,6 @@
+[Sat Apr 15 23:39:48.262082 2017] [ssl:warn] [pid 3631] AH01906: propuestas.dev:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Apr 15 23:40:07.360532 2017] [ssl:warn] [pid 3631] AH01906: propuestas.dev:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Apr 16 09:08:34.442966 2017] [ssl:warn] [pid 88] AH01906: propuestas.dev:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Apr 16 09:08:35.500491 2017] [ssl:warn] [pid 88] AH01906: propuestas.dev:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 17 11:13:50.122812 2017] [ssl:warn] [pid 88] AH01906: propuestas.dev:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 17 11:13:50.577779 2017] [ssl:warn] [pid 88] AH01906: propuestas.dev:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
