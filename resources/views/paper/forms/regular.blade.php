@@ -1,10 +1,6 @@
 @extends('paper.layouts.paper')
-
-@section('title', '- Regular Form')
-
-@section('navbar')
-  @include('paper.components.navbar', ['title' => 'Regular Form'])
-@endsection
+@section('title', '- Regular Forms')
+@section('navbar', 'Regular Forms')
 
 @section('content')
   <div class="row">
@@ -86,7 +82,7 @@
           <h4 class="card-title">Form Elements</h4>
         </div>
         <div class="card-content">
-          <form method="get" action="http://demos.creative-tim.com/" class="form-horizontal">
+          <form method="get" action="" class="form-horizontal">
             <fieldset>
               <div class="form-group">
                 <label class="col-sm-2 control-label">With help</label>

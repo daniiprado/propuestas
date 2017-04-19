@@ -73,11 +73,15 @@
     </div>
 
     <div class="links">
-      <a href="{{ url('/paper/paginas/login') }}">Paper</a>
-      <a href="{{ url('/light/paginas/login') }}">Light</a>
-      <a href="{{ url('/material/paginas/logon') }}">Material</a>
+      <a href="{{ url('/paper/dashboard/overview') }}">Paper</a>
+      <a href="{{ url('/light/dashboard') }}">Light</a>
+      <a href="{{ url('/material/dashboard') }}">Material</a>
     </div>
   </div>
 </div>
 </body>
 </html>
+
+
+
+

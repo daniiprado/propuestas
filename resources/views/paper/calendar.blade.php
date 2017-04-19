@@ -1,10 +1,6 @@
 @extends('paper.layouts.paper')
-
-@section('title', '- Calendar')
-
-@section('navbar')
-  @include('paper.components.navbar', ['title' => 'Calendar'])
-@endsection
+@section('title', '- Calendario')
+@section('navbar', 'Calendario')
 
 @section('content')
   <div class="row">
@@ -19,13 +15,12 @@
 @endsection
 
 @push('scripts')
-<!-- Sweet Alert 2 plugin -->
-<script src="{{asset('paper/assets/js/sweetalert2.js')}}"></script>
 <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-<script src="{{asset('paper/assets/js/moment.min.js')}}"></script>
-<!-- Circle Percentage-chart -->
-<script src="{{asset('paper/assets/js/fullcalendar.min.js')}}"></script>
-
+<script src="{{ asset('paper/assets/js/moment.min.js') }}"></script>
+<!--  Full Calendar Plugin    -->
+<script src="{{ asset('paper/assets/js/fullcalendar.min.js') }}"></script>
+<!-- Sweet Alert 2 plugin -->
+<script src="{{ asset('paper/assets/js/sweetalert2.js') }}"></script>
 @endpush
 
 @push('functions')

@@ -1,10 +1,6 @@
 @extends('paper.layouts.paper')
-
-@section('title', '- Extended Form')
-
-@section('navbar')
-  @include('paper.components.navbar', ['title' => 'Extended Form'])
-@endsection
+@section('title', '- Extended Forms')
+@section('navbar', 'Extended Forms')
 
 @section('content')
   <div class="card">
@@ -264,25 +260,24 @@
   </div>
 @endsection
 
-
 @push('scripts')
-  <!-- Sliders Plugin -->
-  <script src="{{asset('paper/assets/js/nouislider.min.js')}}"></script>
-  <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-  <script src="{{asset('paper/assets/js/moment.min.js')}}"></script>
-  <!--  Date Time Picker Plugin is included in this js file -->
-  <script src="{{asset('paper/assets/js/bootstrap-datetimepicker.js')}}"></script>
-  <!--  Select Picker Plugin -->
-  <script src="{{asset('paper/assets/js/bootstrap-selectpicker.js')}}"></script>
+<!-- Sliders Plugin -->
+<script src="{{asset('paper/assets/js/nouislider.min.js')}}"></script>
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="{{ asset('paper/assets/js/moment.min.js') }}"></script>
+<!--  Select Picker Plugin -->
+<script src="{{ asset('paper/assets/js/bootstrap-selectpicker.js') }}"></script>
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="{{ asset('paper/assets/js/bootstrap-datetimepicker.js') }}"></script>
 @endpush
 
 @push('functions')
-  <script type="text/javascript">
-    $().ready(function(){
-      // Init Sliders
-      demo.initFormExtendedSliders();
-      // Init DatetimePicker
-      demo.initFormExtendedDatetimepickers();
-    });
-  </script>
+<script type="text/javascript">
+  $().ready(function(){
+    // Init Sliders
+    demo.initFormExtendedSliders();
+    // Init DatetimePicker
+    demo.initFormExtendedDatetimepickers();
+  });
+</script>
 @endpush

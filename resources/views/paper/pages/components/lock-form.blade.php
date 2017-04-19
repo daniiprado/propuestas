@@ -1,5 +1,5 @@
 <div class="wrapper wrapper-full-page">
-  <div class="full-page lock-page" data-color="green" data-image="{{ $image }}">
+  <div class="full-page lock-page" data-color="green" data-image="{{ asset('paper/assets/img/background/background-5.png') }}">
     <!--   you can change the color of the filter page using: data-color="blue | azure | green | orange | red | purple" -->
     <div class="content">
       <form method="#" action="#">

@@ -23,7 +23,9 @@
         <a href="javascript:void(0)" class="switch-trigger background-color">
           <div class="text-center">
             <span class="badge filter badge-white" data-color="white"></span>
-            <span class="badge filter badge-black active" data-color="black"></span>
+            <span class="badge filter badge-green-wild active" data-color="green"></span>
+            <span class="badge filter badge-lemon" data-color="lemon"></span>
+            <span class="badge filter badge-black" data-color="black"></span>
           </div>
           <div class="clearfix"></div>
         </a>

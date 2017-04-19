@@ -1,9 +1,6 @@
 <!-- Bootstrap core CSS     -->
 <link href="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')}}" rel="stylesheet"/>
 
-<!-- Animation library for notifications   -->
-<link href="{{asset('paper/assets/css/animate.min.css')}}" rel="stylesheet"/>
-
 <!--  Material Dashboard core CSS    -->
 <link href="{{asset('material/assets/css/material-dashboard.css')}}" rel="stylesheet"/>
 

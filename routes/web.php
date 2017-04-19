@@ -17,33 +17,51 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'paper'], function () {
 
-  Route::get('/dashboard', 'PaperDashboardController@dashboard');
-  Route::get('/perfil', 'PaperDashboardController@profile');
+  Route::group(['prefix' => 'dashboard'], function () {
+    Route::get('/overview', 'PaperDashboardController@overview');
+    Route::get('/stats', 'PaperDashboardController@stats');
+  });
 
   Route::group(['prefix' => 'componentes'], function () {
-    Route::get('/tipografia', 'PaperDashboardController@typography');
-    Route::get('/iconos', 'PaperDashboardController@icon');
     Route::get('/botones', 'PaperDashboardController@button');
+    Route::get('/grid', 'PaperDashboardController@grid');
+    Route::get('/panel', 'PaperDashboardController@panels');
+    Route::get('/sweetalert', 'PaperDashboardController@sweetAlert');
+    Route::get('/notificaciones', 'PaperDashboardController@notifications');
+    Route::get('/iconos', 'PaperDashboardController@icons');
+    Route::get('/tipografia', 'PaperDashboardController@typography');
   });
 
   Route::group(['prefix' => 'formularios'], function () {
+    Route::get('/regular', 'PaperDashboardController@regularForm');
+    Route::get('/extended', 'PaperDashboardController@extendedForm');
+    Route::get('/validation', 'PaperDashboardController@validationForm');
+    Route::get('/wizard', 'PaperDashboardController@wizardForm');
+  });
+
+  Route::group(['prefix' => 'tablas'], function () {
+    Route::get('/datatables', 'PaperDashboardController@datatables');
     Route::get('/regular', 'PaperDashboardController@regular');
     Route::get('/extended', 'PaperDashboardController@extended');
-    Route::get('/validation', 'PaperDashboardController@validationForm');
-    Route::get('/wizard', 'PaperDashboardController@wizard');
+    Route::get('/bootstrap', 'PaperDashboardController@bootstrap');
   });
+
+  Route::group(['prefix' => 'mapas'], function () {
+    Route::get('/google', 'PaperDashboardController@map');
+    Route::get('/fullscreen', 'PaperDashboardController@fullscreen');
+    Route::get('/vector', 'PaperDashboardController@vector');
+  });
+
+  Route::get('/charts', 'PaperDashboardController@charts');
+  Route::get('/calendario', 'PaperDashboardController@calendar');
 
   Route::group(['prefix' => 'paginas'], function () {
     Route::get('/timeline', 'PaperDashboardController@timeline');
+    Route::get('/perfil', 'PaperDashboardController@profile');
     Route::get('/login', 'PaperDashboardController@login');
     Route::get('/registro', 'PaperDashboardController@register');
     Route::get('/bloqueo', 'PaperDashboardController@lock');
   });
-
-  Route::get('/tablas', 'PaperDashboardController@table');
-  Route::get('/mapas', 'PaperDashboardController@map');
-  Route::get('/notificaciones', 'PaperDashboardController@notification');
-  Route::get('/calendario', 'PaperDashboardController@calendar');
 
 });
 

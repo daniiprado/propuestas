@@ -12,14 +12,10 @@
   <meta name="viewport" content="width=device-width"/>
 
   <!-- Bootstrap core CSS     -->
-  <link href="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')}}" rel="stylesheet"/>
-
-  <!-- Animation library for notifications   -->
-  <link href="{{asset('paper/assets/css/animate.min.css')}}" rel="stylesheet"/>
+  <link href="{{asset('paper/assets/css/bootstrap.min.css')}}" rel="stylesheet"/>
 
   <!--  Paper Dashboard core CSS    -->
-  {{-- <link href="{{asset('paper/assets/css/paper-dashboard.css?v=1.2.1')}}" rel="stylesheet"/> --}}
-  <link href="{{asset('paper/assets/css/_demo.css?v=1.2.1')}}" rel="stylesheet"/>
+  <link href="{{asset('paper/assets/css/paper-dashboard.css?v=1.2.1')}}" rel="stylesheet"/>
 
   <!--  CSS for Demo Purpose, don't include it in your project     -->
   <link href="{{asset('paper/assets/css/demo.css')}}" rel="stylesheet"/>
@@ -31,56 +27,60 @@
 
 </head>
 <body>
-  <div class="wrapper">
-    <!-- Sidebar Start -->
-      @include('paper.components.sidebar')
-    <!-- Sidebar Ends -->
+<div class="wrapper">
+  <!-- Sidebar Start -->
+@include('paper.partials.sidebar')
+<!-- Sidebar Ends -->
 
-    <div class="main-panel">
+  <div class="main-panel">
 
-      <!-- Navbar Start -->
-        @yield('navbar')
-      <!-- Navbar Ends -->
+    <!-- Navbar Start -->
+      @include('paper.partials.navbar')
+    <!-- Navbar Ends -->
 
-      <div class="content">
-        <div class="container-fluid">
-          <!-- Content Start -->
-            @yield('content')
-          <!-- Content Ends -->
-        </div>
+    <div class="content">
+      <div class="container-fluid">
+        <!-- Content Start -->
+          @yield('content')
+        <!-- Content Ends -->
       </div>
-
-      <!-- Footer Start -->
-        @include('paper.components.footer')
-      <!-- Footer Ends -->
-
     </div>
+
+    <!-- Footer Start -->
+      @include('paper.partials.footer')
+    <!-- Footer Ends -->
+
   </div>
+</div>
 
-  <!--   Core JS Files   -->
-  <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.16/js/perfect-scrollbar.jquery.min.js')}}" type="text/javascript"></script>
-  <script src="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<!-- Footer Start -->
+@include('paper.partials.plugin')
+<!-- Footer Ends -->
 
-  <!--  Switch and Tags Input Plugins -->
-  <script src="{{asset('paper/assets/js/bootstrap-switch-tags.js')}}"></script>
+<!--   Core JS Files   -->
+<script src="{{asset('paper/assets/js/jquery-3.1.1.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('paper/assets/js/jquery-ui.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('paper/assets/js/perfect-scrollbar.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('paper/assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
+
+<!--  Switch and Tags Input Plugins -->
+<script src="{{asset('paper/assets/js/bootstrap-switch-tags.js')}}"></script>
 
 
-  <!-- Scripts Start -->
-      @stack('scripts')
-  <!-- Scripts Ends -->
+<!-- Scripts Start -->
+@stack('scripts')
+<!-- Scripts Ends -->
 
-  <!-- Global Custom Scripts Start -->
-    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
-    <script src="{{asset('paper/assets/js/paper-dashboard.js?v=1.2.1')}}"></script>
-    <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-    <script src="{{asset('paper/assets/js/demo.js')}}"></script>
-  <!-- Global Custom Scripts Ends -->
+<!-- Global Custom Scripts Start -->
+<!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+<script src="{{asset('paper/assets/js/paper-dashboard.js?v=1.2.1')}}"></script>
+<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+<script src="{{asset('paper/assets/js/demo.js')}}"></script>
+<!-- Global Custom Scripts Ends -->
 
-  <!-- Functions Start -->
-      @stack('functions')
-  <!-- Functions Ends -->
+<!-- Functions Start -->
+@stack('functions')
+<!-- Functions Ends -->
 
 </body>
 </html>

@@ -2,9 +2,7 @@
 
 @section('title', '- Timeline')
 
-@section('navbar')
-  @include('paper.components.navbar', ['title' => 'Timeline'])
-@endsection
+@section('navbar', 'Timeline')
 
 @section('content')
   <div class="row">

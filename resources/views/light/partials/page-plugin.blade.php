@@ -8,7 +8,7 @@
       <li class="adjustments-line">
         <a href="javascript:void(0)" class="switch-trigger">
           <p>Background Image</p>
-          <div class="switch"
+          <div class="switch switch-sidebar-image"
                data-on-label="ON"
                data-off-label="OFF">
             <input type="checkbox" checked/>

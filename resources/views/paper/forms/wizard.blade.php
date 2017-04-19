@@ -1,10 +1,8 @@
 @extends('paper.layouts.paper')
 
-@section('title', '- Validation Form')
+@section('title', '- Wizard Form')
 
-@section('navbar')
-  @include('paper.components.navbar', ['title' => 'Validation Form'])
-@endsection
+@section('navbar', 'Wizard Form')
 
 @section('content')
   <div class="row">

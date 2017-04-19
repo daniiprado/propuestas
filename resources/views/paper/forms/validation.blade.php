@@ -2,9 +2,7 @@
 
 @section('title', '- Validation Form')
 
-@section('navbar')
-  @include('paper.components.navbar', ['title' => 'Validation Form'])
-@endsection
+@section('navbar', 'Validation Form')
 
 @section('content')
   <div class="row">

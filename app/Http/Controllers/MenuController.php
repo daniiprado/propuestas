@@ -5,74 +5,6 @@ namespace Propuesta\Http\Controllers;
 class MenuController extends Controller
 {
   /**
-   * Return User Data Menu to Paper
-   *
-   * @return array
-   */
-  public function paperUserData()
-  {
-    $user = [
-        'name' => 'Daniel Prado',
-        'picture' => asset('paper/assets/img/faces/face-0.jpg'),
-        'color' => 'udec',
-        'active-color' => 'udec-success',
-        'submenu' => [
-            ['url' => 'javascript:;', 'title' => 'Mi Perfil', 'min' => 'MP'],
-            ['url' => 'javascript:;', 'title' => 'Editar Perfil', 'min' => 'EP'],
-            ['url' => 'javascript:;', 'title' => 'Configuración', 'min' => 'C'],
-        ]
-    ];
-    return $user;
-  }
-
-  /**
-   * Return Data Menu to Paper
-   *
-   * @return array
-   */
-  public function paperMenu()
-  {
-    $items = [
-        'dashboard'       => ['url' => 'paper/dashboard',  'icon' => 'ti-panel'],
-        'perfil'          => ['url' => 'paper/perfil',  'icon' => 'ti-user'],
-        'tablas'          => ['url' => 'paper/tablas',  'icon' => 'ti-view-list-alt'],
-        'componentes'     => ['submenu' => [
-                                'tipografia'  => ['url' => 'paper/componentes/tipografia',  'icon' => 'ti-text', 'min' => ''],
-                                'iconos'      => ['url' => 'paper/componentes/iconos',  'icon' => 'ti-pencil-alt2', 'min' => ''],
-                                'botones'     => ['url' => 'paper/componentes/botones',  'icon' => '', 'min' => 'B'],
-                                ],
-                              'icon'  => 'ti-package',
-                              'url'   => '#componentsExamples',
-                              'div'   => 'componentsExamples'
-                              ],
-        'formularios'     => ['submenu' => [
-                                'regular_forms'     => ['url' => 'paper/formularios/regular',  'icon' => '', 'min' => 'RF'],
-                                'extended_forms'    => ['url' => 'paper/formularios/extended',  'icon' => '', 'min' => 'EF'],
-                                'validation_forms'  => ['url' => 'paper/formularios/validation',  'icon' => '', 'min' => 'VF'],
-                                'wizard'            => ['url' => 'paper/formularios/wizard',  'icon' => '', 'min' => 'W'],
-                                ],
-                              'icon'  => 'ti-clipboard',
-                              'url'   => '#formsExamples',
-                              'div'   => 'formsExamples'
-                              ],
-        'mapas'           => ['url' => 'paper/mapas',  'icon' => 'ti-map'],
-        'notificaciones'  => ['url' => 'paper/notificaciones',  'icon' => 'ti-bell'],
-        'calendario'  => ['url' => 'paper/calendario',  'icon' => 'ti-calendar'],
-        'paginas'     => ['submenu' => [
-            'timeline'            => ['url' => 'paper/paginas/timeline',  'icon' => '', 'min' => 'TL'],
-            'inicio_de_sesion'    => ['url' => 'paper/paginas/login',  'icon' => '', 'min' => 'IS'],
-            'registro'            => ['url' => 'paper/paginas/registro',  'icon' => '', 'min' => 'R'],
-            'bloqueo'             => ['url' => 'paper/paginas/bloqueo',  'icon' => '', 'min' => 'B'],
-        ],
-            'icon'  => 'ti-image',
-            'url'   => '#pagesExamples',
-            'div'   => 'pagesExamples'
-        ],
-    ];
-    return $items;
-  }
-
-  /**
    * Return User Data Menu to Material
    *
    * @return array
@@ -84,9 +16,9 @@ class MenuController extends Controller
       'picture' => asset('paper/assets/img/faces/face-0.jpg'),
       'bg' => asset('material/assets/img/sidebar-1.jpg'),
       /* white | black */
-      'color' => 'black',
+      'color' => 'green',
       /* purple | blue | green | orange | red | rose */
-      'active-color' => 'green',
+      'active-color' => 'rose',
       'submenu' => [
         ['url' => 'javascript:;', 'title' => 'Mi Perfil'],
         ['url' => 'javascript:;', 'title' => 'Editar Perfil'],
@@ -252,6 +184,105 @@ class MenuController extends Controller
         ],
         'charts'  => ['url' => 'light/charts',  'icon' => 'pe-7s-graph1'],
         'calendario'  => ['url' => 'light/calendario',  'icon' => 'pe-7s-date'],
+    ];
+    return $items;
+  }
+
+  /**
+     * Return User Data Menu to Paper
+   *
+   * @return array
+   */
+  public function paperUserData()
+  {
+    $user = [
+        'name' => 'Daniel Prado',
+        'picture' => asset('paper/assets/img/faces/face-0.jpg'),
+        'color' => 'green',
+        'active-color' => 'warning',
+        'submenu' => [
+            ['url' => 'javascript:;', 'title' => 'Mi Perfil', 'min' => 'MP'],
+            ['url' => 'javascript:;', 'title' => 'Editar Perfil', 'min' => 'EP'],
+            ['url' => 'javascript:;', 'title' => 'Configuración', 'min' => 'C'],
+        ]
+    ];
+    return $user;
+  }
+
+  /**
+   * Return Data Menu to Paper
+   *
+   * @return array
+   */
+  public function paperMenu()
+  {
+
+    $items = [
+        'dashboard'     => ['submenu' => [
+              'overview' => ['url' => 'paper/dashboard/overview',  'icon' => '', 'min' => 'OV'],
+              'stats'    => ['url' => 'paper/dashboard/stats',  'icon' => '', 'min' => 'S'],
+          ],
+            'icon'  => 'ti-panel',
+            'url'   => '#dashboardExamples',
+            'div'   => 'dashboardExamples'
+        ],
+        'componentes'     => ['submenu' => [
+            'botones'     => ['url' => 'paper/componentes/botones',  'icon' => '', 'min' => 'B'],
+            'grid'  => ['url' => 'paper/componentes/grid',  'icon' => '', 'min' => 'G'],
+            'panel'  => ['url' => 'paper/componentes/panel',  'icon' => '', 'min' => 'P'],
+            'sweetalert'  => ['url' => 'paper/componentes/sweetalert',  'icon' => '', 'min' => 'SA'],
+            'notificaciones'  => ['url' => 'paper/componentes/notificaciones',  'icon' => '', 'min' => 'N'],
+            'iconos'      => ['url' => 'paper/componentes/iconos',  'icon' => '', 'min' => 'I'],
+            'tipografia'  => ['url' => 'paper/componentes/tipografia',  'icon' => '', 'min' => 'T'],
+        ],
+            'icon'  => 'ti-package',
+            'url'   => '#componentsExamples',
+            'div'   => 'componentsExamples'
+        ],
+        'formularios'     => ['submenu' => [
+            'regular_forms'     => ['url' => 'paper/formularios/regular',  'icon' => '', 'min' => 'RF'],
+            'extended_forms'  => ['url' => 'paper/formularios/extended',  'icon' => '', 'min' => 'EF'],
+            'validation_forms'  => ['url' => 'paper/formularios/validation',  'icon' => '', 'min' => 'VF'],
+            'wizard_forms'  => ['url' => 'paper/formularios/wizard',  'icon' => '', 'min' => 'WF'],
+        ],
+            'icon'  => 'ti-clipboard',
+            'url'   => '#formsExamples',
+            'div'   => 'formsExamples'
+        ],
+
+        'tablas'     => ['submenu' => [
+            'regular_tables'     => ['url' => 'paper/tablas/regular',  'icon' => '', 'min' => 'RT'],
+            'extended_tables'  => ['url' => 'paper/tablas/extended',  'icon' => '', 'min' => 'ET'],
+            'bootstrap_tables'  => ['url' => 'paper/tablas/bootstrap',  'icon' => '', 'min' => 'BT'],
+            'data_tables'  => ['url' => 'paper/tablas/datatables',  'icon' => '', 'min' => 'DT'],
+        ],
+            'icon'  => 'ti-view-list-alt',
+            'url'   => '#tablesExamples',
+            'div'   => 'tablesExamples'
+        ],
+
+        'mapas'     => ['submenu' => [
+            'google_maps'     => ['url' => 'paper/mapas/google',  'icon' => '', 'min' => 'GM'],
+            'vector_maps'  => ['url' => 'paper/mapas/vector',  'icon' => '', 'min' => 'VM'],
+            'fullscreen_maps'  => ['url' => 'paper/mapas/fullscreen',  'icon' => '', 'min' => 'FSM'],
+        ],
+            'icon'  => 'ti-map',
+            'url'   => '#mapsExamples',
+            'div'   => 'mapsExamples'
+        ],
+        'charts'  => ['url' => 'paper/charts',  'icon' => 'ti-bar-chart-alt'],
+        'calendario'  => ['url' => 'paper/calendario',  'icon' => 'ti-calendar'],
+        'paginas'     => ['submenu' => [
+           'timeline'     => ['url' => 'paper/paginas/timeline',  'icon' => '', 'min' => 'TL'],
+           'perfil'     => ['url' => 'paper/paginas/perfil',  'icon' => '', 'min' => 'P'],
+           'login'     => ['url' => 'paper/paginas/login',  'icon' => '', 'min' => 'L'],
+           'registro'     => ['url' => 'paper/paginas/registro',  'icon' => '', 'min' => 'R'],
+           'bloqueo'     => ['url' => 'paper/paginas/bloqueo',  'icon' => '', 'min' => 'LS'],
+        ],
+            'icon'  => 'ti-bell',
+            'url'   => '#pagesExamples',
+            'div'   => 'pagesExamples'
+        ],
     ];
     return $items;
   }
