@@ -15,6 +15,10 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/info', function () {
+  return phpinfo();
+});
+
 Route::group(['prefix' => 'paper'], function () {
 
   Route::group(['prefix' => 'dashboard'], function () {
